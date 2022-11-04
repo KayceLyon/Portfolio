@@ -1,3 +1,36 @@
+/* https://css.gg/menu-grid-r */
+
+gg-menu-grid-r {
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    width: 4.5vw;
+    height: 8vh;
+    left: 92.5vw;
+    top: 3vh;
+}
+.gg-menu-grid-r::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 4.5vw;
+    height: 8vh;
+    left: 92.5vw;
+    top: 3vh;
+    background: currentColor;
+    box-shadow:
+        0 6px 0,
+        6px 6px 0,
+        12px 6px 0,
+        6px 12px 0,
+        12px 12px 0,
+        6px 0 0,
+        12px 0 0,
+        0 12px 0
+    ;
+}
+
 header {
     box-sizing: border-box;
     position: absolute;
@@ -18,7 +51,7 @@ footer {
     top: 100vh;
 
     background: #7F01FE;
-}
+} */
 
 #profile-pic {
     position: absolute;
