@@ -1,3 +1,5 @@
+Link: https://kaycelyon.netlify.app/index.html
+
 Technologies Used:
 
 JavaScript for navigation menu control and carousel controls. jQuery for modal control. Used icons from https://css.gg in my style.css. The modal and the carousel were based on the exercises. I would like to go back and see if I can make something more complex in the future. I ran out of time.
