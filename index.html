@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kayce Lyon</title>
-    <!-- Menu logo -->
-    <link rel="stylesheet" href="https://css.gg/menu-grid-r.css"/>
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-    <header id="navigation-header">
-        <nav id="navigation">
-            <a id="home-page-link" href="index.html"> <span id="logo"></span>Kayce Lyon</a>
-            <button id="gg-menu-grid-r"> </button>
-            <div id="link-menu" class="link-card">
-                <ul class="link-list">
-                    <li class="list"> <a class="link" href="bio.html"> </a></li>
-                    <li class="list"> <a class="link" href="resume.html"> </a></li>
-                    <li class="list"> <a class="link" href="projects.html"> </a></li>
-                </ul>
-            </div>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header id="navbar">
+      <nav class="navbar-container container">
+        <a href="index.html" class="home-link">
+          <img class="navbar-logo" src="logo.JPG" alt="My picture" />
+            Kayce Lyon
+        </a>
+        <button type="button" class="gg-menu-grid-r" aria-controls="navbar-menu" aria-expanded="false">
+        </button>
+        <div id="navbar-menu">
+          <ul class="navbar-links">
+            <li class="navbar-item"><a class="navbar-link" href="bio.html">Home</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="bio.html">Bio</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="resume.html">Resume</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="projects.html">Projects</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
-</body>
+    <button id="openMod">Welcome</button>
+    <div id="modal">
+      <div id="modal-text">
+        <a id="close" href="#">Close</a>
+        <h1 class="welcome">Welcome</h1>
+        <p class="intro">Feel free to browse my biography, portfolio and resume.</p>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <footer>
+      <li class="footer-item"><a class="footer-link" href="https://www.linkedin.com/in/kaycelyon">LinkedIn</a></li>
+      <li class="footer-item"><a class="footer-link" href="https://github.com/KayceLyon">GitHub</a></li>
+    </footer>
+  </body>
 </html>

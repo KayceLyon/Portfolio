@@ -1,0 +1,417 @@
+  /* Clear all margins, padding, and size all elements to include borders and padding. */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Didact Gothic', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+/* Navigation Bar Menu Style: Modified from Previous Personal Website Project*/
+
+/* CSS for Menu Icon: https://css.gg/gg-menu-grid-r */
+.gg-menu-grid-r {
+  color: white;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1.3));
+  margin-bottom: 1.1em;
+}
+.gg-menu-grid-r::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4.5px;
+  height: 4.5px;
+  background: currentColor;
+  box-shadow:
+      0 6px 0,
+      6px 6px 0,
+      12px 6px 0,
+      6px 12px 0,
+      12px 12px 0,
+      6px 0 0,
+      12px 0 0,
+      0 12px 0
+  ;
+}
+  #navbar {
+    position: fixed;
+    height: 4em;
+    background-color: black;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .home-link,
+  .navbar-link,
+  .footer-link {
+    color: rgb(218, 203, 254);
+    text-decoration: none;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+  }
+  
+  .home-link:is(:focus, :hover) {
+    color: white;
+  }
+  
+  .navbar-link {
+    justify-content: center;
+    width: 100%;
+    padding: 0.4em 0.8em;
+    border-radius: 5px;
+  }
+  
+  .navbar-link:is(:focus, :hover) {
+    color: white;
+    background-color: rgb(78, 20, 140);
+  }
+
+  .navbar-logo {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5em;
+  }
+
+  .gg-menu-grid-r {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  /* Menu stays hidden until icon is pressed. */
+  #navbar-menu {
+    position: fixed;
+    top: 4em;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    right: 0;
+  }
+
+  /* Attribute selector (MDN): attribute = value */
+  /* Element + Element selector (W3Schools): selects element directly after previous */
+  .gg-menu-grid-r[aria-expanded="true"] + #navbar-menu {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-links {
+    list-style: none;
+    position: absolute;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    right: 0;
+    margin: 1.4em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .gg-menu-grid-r[aria-expanded="true"] + #navbar-menu .navbar-links {
+    padding: 1em;
+  }
+
+  .navbar-item {
+    margin: 0.4em;
+    width: 100%;
+  }
+
+/* Resume Style: Design Based on Cubic Template -  https://zety.com/resume-templates */
+
+.resume {
+    width: 56vw;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin-top: 3em;
+    padding-top: 3em;
+    padding-left: 2em;
+}
+
+.resume[h5] {
+  font-size: .83;
+}
+
+.job-description {
+  font-size: .85em;
+  list-style: none;
+  padding-left: 1em;
+  margin-bottom: .5em;
+}
+
+/* Info Side Panel Style: Design Based on Cubic Template -  https://zety.com/resume-templates */
+  .personal-info {
+    background-color: rgba(78, 20, 140, 0.459);
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin-top: 3em;
+    padding-top: 2em;
+    padding-left: 1em;
+  }
+
+  /* Circle Icon CSS: https://css.gg/shape-circle */
+  .gg-shape-circle.black{
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    background-color: black;
+    transform: scale(var(--ggs,1));
+    width: .5em;
+    height: .5em;
+    border: 3px solid;
+    border-radius: 100px
+  }
+  
+  .gg-shape-circle.grey{
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    background-color: rgb(94, 94, 94);
+    transform: scale(var(--ggs,1));
+    width: .5em;
+    height: .5em;
+    border: 3px solid rgb(94, 94, 94);
+    border-radius: 100px
+  }
+  
+  .circles , .rating {
+    display: flex;
+    justify-content: right;
+    padding-right: 1em;
+  }
+
+h4, h5, h6 {
+  margin-bottom: .5em;
+}
+
+h5 {
+  font-size: .89em;
+}
+
+.job-description {
+  font-size: .8em;
+}
+
+/* Carousel Style */
+
+.bio-container {
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
+  margin-top: 6em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.bio-header2, .bio-p {
+  margin-bottom: .5em;
+}
+
+/* Modified Carousel exercise CSS */
+.carousel-images {
+	background: black;
+	padding: 10px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	box-shadow: 2px 2px rgb(78, 20, 140);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5em;
+
+}
+.carousel-images img {
+	height: 300px;
+	border-radius: 10px;
+	display: none;
+}
+.carousel-button {
+	background: rgb(78, 20, 140);
+	padding: 10px;
+	border-radius: 50%;
+	text-align: center;
+	box-shadow: 1px 1px black;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-button:hover {
+	cursor: pointer;
+	background: rgb(218, 203, 254);
+	box-shadow: 1px 1px rgb(78, 20, 140);
+}
+
+.carousel-images img:first-of-type {
+  display: block;
+}
+
+/* Modal Style - From Modal Exercise */
+
+#modal {
+  background-color: rgb(78, 20, 140);
+  height: 30%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  overflow: auto;
+}
+
+#modal-text {
+  background-color: rgb(218, 203, 254);
+  align-items: center;
+  height: 80%;
+  width: 60%;
+}
+
+.welcome {
+  padding-bottom: .5em;
+}
+
+/* Project Style */
+
+.projects-container { 
+ margin-top: 6em;
+ padding-left: 2em;
+}
+
+.project-header2, .project-description {
+  margin-bottom: 1em;
+}
+
+/* Footer Style */
+  footer {
+    max-width: 100vw;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    cursor: pointer;
+    position: fixed;
+    height: 4em;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Desktop Style */
+  @media screen and (min-width: 700px) {
+
+    /* Will not display menu card when width > 700px */
+    .gg-menu-grid-r,
+    .gg-menu-grid-r[aria-expanded="true"] {
+      display: none;
+    }
+  
+    /* Will display menu across navigation bar */
+    #navbar-menu,
+    .gg-menu-grid-r[aria-expanded="true"] #navbar-menu {
+      visibility: visible;
+      opacity: 1;
+      position: static;
+      display: block;
+      height: 100%;
+    }
+  
+    .navbar-links,
+    .gg-menu-grid-r[aria-expanded="true"] #navbar-menu .navbar-links {
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      position: static;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+    }
+
+      /* Resume Style */
+
+.resume {
+  width: 55vw;
+  padding-left: 3em;
+}
+
+.job-description {
+font-size: 1em;
+list-style: none;
+padding-left: 1em;
+margin-bottom: .5em;
+}
+
+/* Info Side Panel Style */
+
+.personal-info {
+  background-color: rgba(78, 20, 140, 0.459);
+  width: 20vw;
+  height: 160vh;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  margin-top: 3em;
+  padding-top: 3em;
+  padding-left: 1em;
+}
+
+.section-header {
+  font-size: 1em;
+}
+
+.job-title {
+  font-size: .9em;
+}
+
+.job-description {
+font-size: .9em;
+}  
+
+.info {
+  font-size: .85em;
+}
+
+.bio-container {
+  margin-top: 4em;
+}
+  }
+
+
+    
